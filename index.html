@@ -71,63 +71,54 @@ h1 {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>MHACS Platform Explanation</title>
 </head>
 <body>
-  <div class="container">
-        
-    <h1>MHACS Platform Explanation</h1>
-  <div   class="component" id="home">
+    <div class="container">
+        <h1>MHACS Platform Explanation</h1>
+        <div class="component" id="home" onclick="togglePopup('home-popup')">
             <h2>Home Page</h2>
-            <button onclick="togglePopup('home-popup')">Info</button>
             <div id="home-popup" class="popup">
                 <p>The home page provides an overview of various socio-economic and environmental data relevant to Lebanon. This includes population, capacity, conflict, and infrastructure information such as camp locations, water quality, stakeholders, and solarization fields. The home page includes pop-ups explaining different concepts and definitions for user clarity.</p>
             </div>
         </div>
-        <div class="component" id="climate_profile">
+        <div class="component" id="climate_profile" onclick="togglePopup('climate_profile-popup')">
             <h2>Climate Profile</h2>
-            <button onclick="togglePopup('climate_profile-popup')">Info</button>
             <div id="climate_profile-popup" class="popup">
                 <p>This section offers a detailed climate profile of Lebanon, explaining how to interpret climate information. It highlights evolving climate patterns, their impacts on hazard frequency and severity, and supports collective decision-making for disaster preparedness and risk reduction.</p>
             </div>
         </div>
-        <div class="component" id="climate_drivers">
+        <div class="component" id="climate_drivers" onclick="togglePopup('climate_drivers-popup')">
             <h2>Climate Drivers</h2>
-            <button onclick="togglePopup('climate_drivers-popup')">Info</button>
             <div id="climate_drivers-popup" class="popup">
                 <p>Users can select different communities and hazards to understand historic and projected climate drivers. This section covers hazard exposure, changes in climate drivers, and includes key figures related to selected hazards. It provides a narrative explaining how hazard exposure is expected to change due to climate change.</p>
             </div>
         </div>
-        <div class="component" id="evca">
+        <div class="component" id="evca" onclick="togglePopup('evca-popup')">
             <h2>Enhanced Vulnerability and Capacity Assessment (EVCA)</h2>
-            <button onclick="togglePopup('evca-popup')">Info</button>
             <div id="evca-popup" class="popup">
                 <p>The EVCA component allows access to pre-existing community-based disaster risk management reports, hazard exposure maps, risk scores, and relevant tools. This fosters a deeper understanding of vulnerabilities and capacities within local communities, aiding in targeted decision-making.</p>
             </div>
         </div>
-        <div class="component" id="multi_hazard_assessment">
+        <div class="component" id="multi_hazard_assessment" onclick="togglePopup('multi_hazard_assessment-popup')">
             <h2>Multi-Hazard Assessment</h2>
-            <button onclick="togglePopup('multi_hazard_assessment-popup')">Info</button>
             <div id="multi_hazard_assessment-popup" class="popup">
                 <p>This section integrates various data sources and scientific literature to present a holistic understanding of how different hazards and vulnerabilities interact, potentially causing compounding effects. It uses impact chains to depict these interactions and includes key outputs for assessing vulnerabilities and capacities.</p>
             </div>
         </div>
-        <div class="component" id="impact_chains">
+        <div class="component" id="impact_chains" onclick="togglePopup('impact_chains-popup')">
             <h2>Impact Chains</h2>
-            <button onclick="togglePopup('impact_chains-popup')">Info</button>
             <div id="impact_chains-popup" class="popup">
                 <p>The impact chains provide detailed narratives of how different hazards affect various sectors such as health, shelter, and economic opportunities. This helps prioritize dimensions for intervention and showcases the resilience context for different communities.</p>
             </div>
         </div>
     </div>
-    <script src="scripts.js"></script>
+    <script>
+        function togglePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 </body>
-</html>
-<script>
-  function togglePopup(popupId) {
-    const popup = document.getElementById(popupId);
-    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
-}
- </script>
 </html>
